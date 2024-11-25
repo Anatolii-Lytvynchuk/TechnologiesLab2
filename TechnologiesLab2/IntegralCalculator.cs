@@ -27,6 +27,19 @@ namespace TechnologiesLab2
             }
             threads.ForEach(t => t.Join());
             return listResult.Sum();
+            /*
+            var listResult = new ConcurrentBag<double>();
+            ParallelOptions options = new ParallelOptions()
+            {
+                MaxDegreeOfParallelism = maxCountThreads
+            };
+            Parallel.For(0, countThreads, options, thread =>
+            {
+                listResult.Add(CalculationTrapeziumMethod(a, b, countOfIntervals, function, countThreads, thread));
+            }
+            );
+            return listResult.Sum();
+            */
         }
 
         private double CalculationTrapeziumMethod(double a, double b, long countOfIntervals, Function function, int countThreads, int thread)
