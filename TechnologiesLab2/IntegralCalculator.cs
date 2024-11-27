@@ -29,7 +29,7 @@ namespace TechnologiesLab2
             return listResult.Sum();
             /*
             var listResult = new ConcurrentBag<double>();
-            ParallelOptions options = new ParallelOptions()
+            var options = new ParallelOptions()
             {
                 MaxDegreeOfParallelism = maxCountThreads
             };
