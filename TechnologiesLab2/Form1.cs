@@ -14,7 +14,7 @@ namespace TechnologiesLab2
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
             GetCountThreadAndCountOfIntervals(out long countOfInterval, out int countThreads,out int maxCountThread);
-            Stopwatch stopwatch = new Stopwatch();
+            var stopwatch = new Stopwatch();
             stopwatch.Start();
             double result = new IntegralCalculator().Calculate(1, 4, countOfInterval, new Function(), countThreads,maxCountThread);
             stopwatch.Stop();
