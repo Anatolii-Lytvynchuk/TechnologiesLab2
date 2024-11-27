@@ -10,7 +10,7 @@ namespace TechnologiesLab2
 
         public double Calculate(double a, double b, long countOfIntervals, Function function, int countThreads, int maxCountThreads)
         {
-            SemaphoreSlim semaphore = new SemaphoreSlim(maxCountThreads);
+            var semaphore = new SemaphoreSlim(maxCountThreads);
             var listResult = new ConcurrentBag<double>();
             var threads = new List<Thread>();
             for (int threadIndex = 0; threadIndex < countThreads; threadIndex++)
